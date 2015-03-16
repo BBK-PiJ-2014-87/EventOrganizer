@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.famlabs.controller.EventOverviewController">
+   <children>
+      <SplitPane dividerPositions="0.55" layoutX="28.0" layoutY="40.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="368.0" prefWidth="237.0">
+               <children>
+                  <TableView fx:id="eventTable" layoutX="7.0" layoutY="14.0" prefHeight="363.0" prefWidth="319.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columns>
+                      <TableColumn fx:id="eventNameColumn" prefWidth="157.0" text="Event Name" />
+                      <TableColumn fx:id="eventOrganizerColumn" prefWidth="161.0" text="Event Organizer" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" prefHeight="20.0" prefWidth="103.0" text="EVENT DETAILS:" />
+                  <GridPane layoutX="12.0" layoutY="61.0" prefHeight="187.0" prefWidth="236.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="61.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="121.0" minWidth="10.0" prefWidth="107.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="159.0" minWidth="10.0" prefWidth="129.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="CITY:" GridPane.rowIndex="5" />
+                        <Label text="GUESTS:" GridPane.rowIndex="3" />
+                        <Label text="COUNTRY:" GridPane.rowIndex="4" />
+                        <Label text="DATE:" GridPane.rowIndex="6" />
+                        <Label text="HOST:" GridPane.rowIndex="2" />
+                        <Label text="ORGANIZER:" GridPane.rowIndex="1" />
+                        <Label text="NAME:" />
+                        <Label fx:id="eventDateLabel" prefHeight="16.0" prefWidth="117.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                        <Label fx:id="eventNameLabel" prefHeight="16.0" prefWidth="117.0" text="Label" GridPane.columnIndex="1" />
+                        <Label fx:id="eventOrganizerLabel" prefHeight="16.0" prefWidth="117.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label fx:id="eventHostLabel" prefHeight="16.0" prefWidth="117.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label fx:id="eventGuestsLabel" prefHeight="16.0" prefWidth="117.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Label fx:id="eventCountryLabel" prefHeight="16.0" prefWidth="117.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <Label fx:id="eventCityLabel" prefHeight="16.0" prefWidth="117.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                     </children>
+                  </GridPane>
+                  <HBox layoutX="133.0" layoutY="324.0" spacing="10.0" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="5.0">
+                     <children>
+                        <Button layoutX="66.0" layoutY="323.0" mnemonicParsing="false" text="New" />
+                        <Button layoutX="131.0" layoutY="323.0" mnemonicParsing="false" text="Edit" />
+                        <Button layoutX="191.0" layoutY="323.0" mnemonicParsing="false" onAction="#deleteEvent" text="Delete" />
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+      <Label fx:id="statusBarLebel" layoutX="7.0" layoutY="374.0" prefHeight="20.0" prefWidth="319.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="6.0" />
+   </children>
+</AnchorPane>
