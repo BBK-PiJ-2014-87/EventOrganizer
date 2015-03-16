@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2015 Famlabs Ltd. All rights reserved.
+ * Copyright (c) 2015 Famlabs.com. All rights reserved.
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
  * 
  * This code is free software. You can redistribute it and/or modify it
